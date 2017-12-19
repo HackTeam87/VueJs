@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<style>
+    .centered {
+        width: 600px;
+        height: auto;
+        margin: 0 auto;
+    }
+    #app{
+        margin: 0 auto;
+    }
+</style>
+
+<div class="centered">
+
+    <div class="divy" id="app">
+
+        <h1>{{ message}}</h1>
+        <input type="text" v-model="message">
+
+        <pre>{{$data|json}}</pre>
+
+    </div>
+
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/0.12.16/vue.min.js"></script>
+
+<script>
+
+   new Vue ({
+       el: "#app",
+       data: {
+           message: "Hello Word"
+       }
+
+   })
+
+</script>
+
+</body>
+</html>
